@@ -1,14 +1,25 @@
-import React from 'react'
+import React from "react";
+import "./style/frontCard.css";
 
-const FrontCard = ({formCard}) => {
-    console.log(formCard)
+const FrontCard = ({ formCard }) => {
+  console.log(formCard);
   return (
-    <div className='card frontCard'>
-        <div className='card__circle'><i className="fa-thin fa-circle"></i><i className="fa-sharp fa-solid fa-circle"></i></div>
-        <p><span className='card__number'>{formCard.number}</span></p>
-        <div className='card__aditional'><span className='card__name'>{formCard.name} </span> <span className='card__date'>{formCard.month}/{formCard.year}</span></div>
+    <div className="card frontCard">
+      <div className="circles">
+        <div className="circle__big"></div>
+        <div className="circle__small"></div>
+      </div>
+      <p className="card__number">
+        {formCard.number.padStart(16, 0).replace(/([0-9]{4})/g, "$1 ")}
+      </p>
+      <div className="card__aditional">
+        <span className="card__name">{formCard.name? formCard.name:"JANE APPLESEED"} </span>{" "}
+        <span className="card__date">
+          {formCard.month.padStart(2,0)}/{formCard.year.padStart(2,0)}
+        </span>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default FrontCard
+export default FrontCard;

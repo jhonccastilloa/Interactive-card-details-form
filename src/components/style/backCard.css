@@ -1,5 +1,13 @@
 .backCard {
   background-image: url("/background/bg-card-back.png");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+  align-self: flex-end;
+  position: relative;
+}
+.backCard__span{
+  font-size: 20px;
+position: absolute;
+top: 44%;
+right: 12%;
 }

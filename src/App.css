@@ -1,5 +1,38 @@
-.card{
- max-width: 280px;
- height: 150px;
- border: 2px solid black;
+.App {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.App__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 31%;
+  background-size: cover;
+  height: 100vh;
+  background-image: url("/background/bg-main-desktop.png");
+  z-index: -1;
+}
+.section__cards {
+  width: 50%;
+  min-width: 447px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.section__form {
+  width: 50%;
+
+}
+
+.card {
+  width: 447px;
+  height: 245px;
+  border-radius: 10px;
+  padding: 30px;
+  color: white;
 }

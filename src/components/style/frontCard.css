@@ -1,0 +1,50 @@
+.frontCard {
+  background-image: url("/background/bg-card-front.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 15px;
+  position: relative;
+}
+.card__number{
+  text-align: center;
+  letter-spacing: 4px;
+  font-size: clamp(22px,2.5vw,27px);
+}
+.card__name{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+}
+
+.card__aditional{
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 2px;
+
+}
+.circles{
+  height: 50px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+}
+.circle__big{
+  width: 50px;
+  aspect-ratio: 1;
+  
+  background-color: #fff;
+  border-radius: 50%;
+
+}
+.circle__small{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
