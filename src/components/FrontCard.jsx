@@ -2,7 +2,6 @@ import React from "react";
 import "./style/frontCard.css";
 
 const FrontCard = ({ formCard }) => {
-  console.log(formCard);
   return (
     <div className="card frontCard">
       <div className="circles">

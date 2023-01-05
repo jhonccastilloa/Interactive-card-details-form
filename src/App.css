@@ -26,7 +26,8 @@
 }
 .section__form {
   width: 50%;
-
+  display: flex;
+  justify-content: center;
 }
 
 .card {

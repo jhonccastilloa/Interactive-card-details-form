@@ -5,7 +5,8 @@ import FormCard from "./components/FormCard";
 import FrontCard from "./components/FrontCard";
 
 function App() {
-  const [count, setCount] = useState(0);
+
+  const [checkForm, setCheckForm] = useState(false)
   const [formCard, setFormCard] = useState({
     name: "",
     number: "",
@@ -26,6 +27,7 @@ function App() {
       <section className="section__form">
         <FormCard formCard={formCard} setFormCard={setFormCard} />
       </section>
+      <section className="section__checkout"></section>
     </div>
   );
 }
