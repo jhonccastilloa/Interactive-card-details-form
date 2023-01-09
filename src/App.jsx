@@ -5,13 +5,13 @@ import CheckoutForm from "./components/CheckoutForm";
 import FormCard from "./components/FormCard";
 import FrontCard from "./components/FrontCard";
 
-const initialValues={
+const initialValues = {
   name: "",
   number: "",
   month: "",
   year: "",
   cvc: "",
-}
+};
 function App() {
   const [checkAnimationForm, setCheckAnimationForm] = useState(false);
   const [checkForm, setCheckForm] = useState(false);
@@ -22,16 +22,23 @@ function App() {
 
   const handleCheckout = () => {
     setCheckAnimationForm(true);
+    document.body.style.overflow = "hidden";
     setTimeout(() => {
-      setFormCard(initialValues)
-      setCheckForm(!checkForm)
+      setFormCard(initialValues);
+      setCheckForm(!checkForm);
       setCheckAnimationForm(false);
+      
     }, 600);
+    setTimeout(()=>document.body.style.overflow = "auto",1200)
+    
   };
   return (
     <div className="App">
       <div
         className={`App__bg ${checkAnimationForm && "App__bg--checkout"}`}
+      ></div>
+      <div
+        className={`App__bg--mobile ${checkAnimationForm && "App__bg--checkout-mobile"}`}
       ></div>
       <section className="section__cards">
         <FrontCard formCard={formCard} />
@@ -43,9 +50,13 @@ function App() {
         }`}
       >
         {!checkForm ? (
-          <FormCard handleCheckout={handleCheckout} formCard={formCard} setFormCard={setFormCard} />
+          <FormCard
+            handleCheckout={handleCheckout}
+            formCard={formCard}
+            setFormCard={setFormCard}
+          />
         ) : (
-          <CheckoutForm handleCheckout={handleCheckout}/>
+          <CheckoutForm handleCheckout={handleCheckout} />
         )}
       </section>
     </div>

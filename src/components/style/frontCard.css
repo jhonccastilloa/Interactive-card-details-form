@@ -49,3 +49,31 @@
   border: 1px solid #fff;
 }
 
+
+@media (max-width: 1002px) {
+  .frontCard{
+    position: relative;
+    z-index: 1;
+    top: -102px;
+  }
+  .card__number{
+    font-size: 19px;
+  }
+  .card__name{
+    font-size: 14px;
+    
+    
+  }
+  
+  .card__aditional{
+    font-size: 14px;
+  
+  }
+  .circles{
+    height: 40px;
+  }
+  .circle__big{
+    width: 40px;
+  
+  }
+}
