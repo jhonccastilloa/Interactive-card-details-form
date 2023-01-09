@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import "./style/formCard.css";
 
-const FormCard = ({ formCard, setFormCard }) => {
+const FormCard = ({ formCard, setFormCard,handleCheckout }) => {
   const [formValidate, setFormValidate] = useState();
   const [buttoError, setButtoError] = useState(false);
 
@@ -31,14 +31,13 @@ const FormCard = ({ formCard, setFormCard }) => {
     e.preventDefault();
 
     const error = validateForm();
-    console.log(error);
     if (Object.entries(error).length !== 0) {
       setFormValidate(error);
       setButtoError(true);
       setTimeout(() => setButtoError(false), 500);
     } else {
       setFormValidate();
-      console.log("se enviara conrrectamente");
+      handleCheckout()
     }
   };
 
@@ -65,16 +64,15 @@ const FormCard = ({ formCard, setFormCard }) => {
 
     if (!formCard.cvc) {
       error.cvc = "Can`t be blank";
-    } else if (formCard.number.length < 4) {
-      error.date = "Number is too short";
+    } else if (formCard.cvc.length < 4) {
+      error.cvc = "Number is too short";
     }
 
     return error;
   };
 
-  console.log(formValidate && Object.entries(formValidate).length == 0);
+  // console.log(formValidate && Object.entries(formValidate).length == 0);
 
-  console.log(buttoError);
   return (
     <form onSubmit={handleSubmit} className="form">
       <div className="form__group">

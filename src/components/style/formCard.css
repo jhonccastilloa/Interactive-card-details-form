@@ -36,6 +36,7 @@
 }
 
 .form__confirm {
+  cursor: pointer;
   margin-top: 30px;
   padding: 15px 0;
   font-size: var(--font-size);

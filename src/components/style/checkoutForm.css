@@ -1,0 +1,17 @@
+.checkout{
+  text-align: center;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.checkout__figure{
+  margin-bottom: 10px;
+}
+.checkout__title{
+  color: var(--very-grayish-violet);
+}
+.checkout__text{
+  font-size: 14px;
+  color: var(--dark-grayish-violet);
+
+}

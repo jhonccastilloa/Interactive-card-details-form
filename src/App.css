@@ -16,6 +16,11 @@
   height: 100vh;
   background-image: url("/background/bg-main-desktop.png");
   z-index: -1;
+  transition: width 500ms ease;
+}
+.App__bg--checkout {
+  width: 100%;
+  
 }
 .section__cards {
   width: 50%;
@@ -28,8 +33,12 @@
   width: 50%;
   display: flex;
   justify-content: center;
+  transition: transform 500ms ease;
 }
 
+.section__form--checkout{
+  transform: translateX(100vh);
+}
 .card {
   width: 447px;
   height: 245px;
