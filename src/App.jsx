@@ -27,10 +27,8 @@ function App() {
       setFormCard(initialValues);
       setCheckForm(!checkForm);
       setCheckAnimationForm(false);
-      
     }, 600);
-    setTimeout(()=>document.body.style.overflow = "auto",1200)
-    
+    setTimeout(() => (document.body.style.overflow = "auto"), 1200);
   };
   return (
     <div className="App">
@@ -38,7 +36,9 @@ function App() {
         className={`App__bg ${checkAnimationForm && "App__bg--checkout"}`}
       ></div>
       <div
-        className={`App__bg--mobile ${checkAnimationForm && "App__bg--checkout-mobile"}`}
+        className={`App__bg--mobile ${
+          checkAnimationForm && "App__bg--checkout-mobile"
+        }`}
       ></div>
       <section className="section__cards">
         <FrontCard formCard={formCard} />
